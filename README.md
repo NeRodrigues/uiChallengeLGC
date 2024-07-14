@@ -19,7 +19,7 @@ Playwright UI challenge using TODO MVC.
     npx playwright test
     ```
 
-1. Generate and view report
+1. Generate and view report:
     ```sh
     npx allure serve allure-results
     ```
