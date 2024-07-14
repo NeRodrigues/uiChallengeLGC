@@ -23,9 +23,9 @@ export default defineConfig({
     video: 'on'
   },
   projects: [{
-    name: 'chromium',
+    name: 'LGC UI challenge',
     use: {
       ...devices['Desktop Chrome']
     },
   }, ],
-});
+})

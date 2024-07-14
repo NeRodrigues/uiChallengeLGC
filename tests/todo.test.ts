@@ -3,25 +3,18 @@ import {
   test
 } from '@playwright/test'
 
-import { allure } from "allure-playwright"
-
 import { TodoPage } from '../pages/todoPage'
 import { baseURL } from '../playwright.config'
 
 test.describe('UI tests LGC challenge Nélia Rodrigues', () => {
-  allure.feature('Todo app tests')
-
   let todoPage: TodoPage
 
   test.beforeEach(async ({ page }) => {
     todoPage = new TodoPage(page)
-
     await page.goto(baseURL)
   })
 
   test('User can add items to Todo list', async ({ page }) => {
-    allure.story('User can add items to Todo list')
-
     await expect(page).toHaveURL(baseURL)
 
     const currentDate = todoPage.getCurrentDate()
@@ -34,8 +27,6 @@ test.describe('UI tests LGC challenge Nélia Rodrigues', () => {
   })
 
   test('User can mark a todo item as completed', async () => {
-    allure.story('User can mark a todo item as completed')
-
     const { todayTodo } = await todoPage.addItems()
 
     const todayTodoItem = todoPage.addedItemContainer.filter({ hasText: todayTodo })
@@ -48,8 +39,6 @@ test.describe('UI tests LGC challenge Nélia Rodrigues', () => {
   })
 
   test('User can delete todo items', async () => {
-    allure.story('User can delete a todo item')
-
     const { tomorrowTodo } = await todoPage.addItems()
 
     const tomorrowTodoItem = todoPage.addedItemContainer.filter({ hasText: tomorrowTodo })
