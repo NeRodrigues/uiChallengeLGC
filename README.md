@@ -1,7 +1,7 @@
 # uiChallengeLGC
 
 ## Overview
-This project is part of the LGC recruitment technical challenge for UI testing.
+Playwright UI challenge using TODO MVC.
 
 ## Requirements
 - [npm](https://www.npmjs.com/)
